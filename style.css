@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  /* drop-shadow(0 12px 24px hsla(0, 0%, 0%, 0.4)) */
+  /* drop-shadow(0 12px 24px hsla(0, 0%, 0%, 0.4)) */
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fd96b7;
+  font-family: "Poppins", sans-serif;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.section {
+  padding-block: 5rem 1rem;
+}
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fd96b7;
+  /* box-shadow: 0 8px 16px hsla(230, 75%, 32%, 0.15); */
+  z-index: 100;
+}
+.nav {
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo i,
+.navbar__toggle,
+.navbar__close {
+  font-size: 1.5rem;
+  color: #000000;
+  cursor: pointer;
+}
+@media screen and (max-width: 1023px) {
+  .navbar__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #f7b1ce;
+    padding: 5rem 3rem;
+    transition: 0.4s;
+  }
+}
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.navbar__list li a {
+  position: relative;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: 0.4s;
+}
+.navbar__list li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  left: 0;
+  bottom: -0.5rem;
+  transition: 0.4s;
+}
+.navbar__list li a:hover::after {
+  width: 20px;
+}
+.navbar__close {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.5rem;
+}
+.open-menu {
+  right: 0;
+}
+.home__container {
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+.home__data {
+  text-align: center;
+}
+.home__data h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.home__data h1 {
+  font-family: "Cookie", cursive;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
+}
+.home__button {
+  margin-top: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+.button {
+  padding: 0.75rem 2rem;
+  background-color: #fb5388;
+  color: #000000;
+  border-radius: 4rem;
+  font-weight: 400;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.16);
+}
+.button__ghost {
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+.home__sticker-1,
+.home__sticker-2 {
+  position: absolute;
+  opacity: 0.75;
+  width: 30px;
+}
+.home__sticker-1 {
+  left: 0;
+  top: 14rem;
+}
+.home__sticker-2 {
+  right: 0;
+  bottom: 15rem;
+  rotate: -20deg;
+}
+.home__img {
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  width: 350px;
+  filter: drop-shadow(0 2px 4px hsla(0, 0%, 0%, 0.16));
+}
+@media screen and (max-width: 350px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .home__data h1 {
+    font-size: 3rem;
+  }
+  .home__sticker-1 {
+    top: 12.5rem;
+  }
+  .home__button {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+@media screen and (min-width: 567px) {
+  .home__sticker-1 {
+    left: 4rem;
+  }
+  .home__sticker-2 {
+    right: 4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .home__data p {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .home__sticker-1 {
+    left: 10rem;
+  }
+  .home__sticker-2 {
+    bottom: 16rem;
+    right: 6rem;
+  }
+  .home__img {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .navbar__close,
+  .navbar__toggle {
+    display: none;
+  }
+  .nav {
+    height: calc(3.5rem + 1.5rem);
+  }
+  .navbar__menu {
+    width: initial;
+    margin-left: auto;
+  }
+  .navbar__list {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+.navbar__link{
+font-style: normal
+}
+}
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+  .logo i {
+    font-size: 2.5rem;
+  }
+  .home__container {
+    grid-template-columns: 535px 480px;
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .home__data {
+    text-align: initial;
+  }
+  .home__data h4 {
+    font-size: 1.25rem;
+  }
+  .home__data h1 {
+    font-size: 4.5rem;
+  }
+  .home__button,
+  .home__data p {
+    justify-content: initial;
+    margin: 1rem 0;
+  }
+  .home__sticker-1,
+  .home__sticker-2 {
+    width: 50px;
+  }
+  .home__sticker-1 {
+    left: -3rem;
+    top: 11rem;
+  }
+  .home__sticker-2 {
+    right: -2rem;
+  }
+}
